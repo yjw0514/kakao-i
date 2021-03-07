@@ -1,0 +1,129 @@
+header {
+  width: 100%;
+  height: 59px;
+  background-color:transparent;
+  border-bottom-style: 1px solid rgb(242, 242, 242);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header:hover {
+  transition: all 0.6s ease;
+}
+
+.gnb {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* gnbContet CSS */
+
+.gnb_content {
+  display: flex;
+  align-items: center;
+}
+
+.gnb_content_logo {
+  width: 80px;
+  margin: 0 75px 0 0;
+  padding: 10px 0;
+  /* font-size: 28px;
+  color: rgb(255, 255, 255);
+  line-height: 60px;
+  padding: 10px 0; */
+}
+
+.gnb_content_items {
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  line-height: 60px;
+  padding: 10px 25px;
+}
+
+/* gnbLink CSS */
+
+.gnb_link {
+  display: flex;
+}
+
+.gnb_link li a {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  line-height: 60px;
+}
+
+.gnb_link li:nth-child(1) a {
+  margin: 0 50px 0 0;
+}
+
+.gnb_link_icon {
+  width: 10px;
+  height: 10px;
+  margin: 0 10px 0 0;
+}
+
+/* Sub GNB Product */
+.sub_gnb_product {
+  width: 100%;
+  height: 140px;
+  background-color: rgb(248, 248, 248);
+  display: none;
+}
+
+.gnb_product {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  /* width: 500px; */
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.gnb_product li {
+  padding: 25px 0;
+}
+
+.gnb_product li:nth-child(1) img {
+  margin: 0 0 0 170px;
+}
+
+.gnb_product img {
+  width: 100px;
+}
+
+/* Sub GNB Partner */
+.sub_gnb_partner {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(248, 248, 248);
+  display: none;
+}
+
+.gnb_partner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: start;
+}
+
+.gnb_partner li a {
+  display: block;
+  font-size: 14px;
+  color: rgb(19, 20, 21);
+  line-height: 40px;
+  letter-spacing: normal;
+  padding: 0 16px;
+}
+
+.gnb_partner li:nth-child(1) a {
+  margin: 0 0 0 180px;
+}
+
+

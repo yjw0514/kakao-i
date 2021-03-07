@@ -1,0 +1,383 @@
+/* Main Visual */
+.maino_visual {
+  width: 100%;
+}
+
+.main_visual {
+  width: 100%;
+  height: 950px;
+  background-image: url(../img/main_visual.jpg);
+  background-size: cover ;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.main_visual_text {
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main_visual_text h1 {
+  font-size: 140px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 151px; 
+  color: #ffe100;
+  padding: 200px 0 0 0;
+}
+
+.main_visual_text p {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  color: rgb(255,255,255);
+  padding: 0 0 100px 0;
+}
+
+/* Info description 1 */
+.info_desc_1 {
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.info_desc_1 p {
+  width: 997px;
+  height: 236px;
+  word-break: keep-all;
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 59.85px;
+  margin: 160px 0 0 0;
+}
+
+/* Info inside */
+.info_inside {
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+  margin: 240px auto 0;
+}
+
+.inside_ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.inside_list {
+  width: 257px;
+  height: 413px;
+  margin: 0 0 0 110px;
+}
+
+.inside_list_tit {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  line-height: 27.94px;
+}
+
+.inside_list_txt {
+  margin: 50px 0 0 0;
+  font-size: 16px;
+  font-weight: 300px;
+  letter-spacing: -0.25px;
+  line-height: 28px;
+  color: rgb(136, 136, 136);
+  word-break: keep-all;
+}
+
+/* Info visual */
+.info_visual {
+  width: 100%;
+  height: auto;
+  padding: 0 80px;
+}
+
+.info_visual img {
+  display: block;
+  width: 100%;
+  max-width: 1600px;
+  margin: 200px auto 0;
+}
+
+/* Info Description 2  */
+.info_desc_2 {
+  width: 100%;
+  max-width: 1440px;
+  height: 168px;
+  margin: 240px auto 0;
+}
+
+.info_desc_2 p {
+  width: 613px;
+  height: 168px;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.25px;
+  line-height: 42px;
+  color: rgb(37, 37, 37);
+}
+
+/* Info effect sticky */
+.info_effect_sticky {
+  width: 100%;
+  height: 2200px;
+}
+
+.inner_info {
+  width: 100%;
+  height: 100%;
+  padding: 300px 0 0 0;
+  background-color: rgb(253, 223, 29);
+  animation: scroll_sticky 3s forwards 0.2s;
+}
+
+.inner_info p {
+  font-size: 160px;
+  font-weight: 700;
+  font-family: 'Mark Pro', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+  letter-spacing: -1px;
+  line-height: 203px;
+  color: rgb(37, 37, 37);
+  text-align: center;
+  position: sticky;
+  top: 179px;
+  bottom: 0;
+  z-index: 10;
+}
+
+/* JS로 바꾸기 */
+/* @keyframes scroll_sticky {
+  0% { opacity: 1; }
+  10% { opacity: 0.8; }
+  20% { opacity: 0.4; }
+  30% { opacity: 0; }
+  40% { opacity: 0; }
+  50% { opacity: 0; }
+  60% { opacity: 0; }
+  70% { opacity: 0; }
+  80% { opacity: 0.4; }
+  90% { opacity: 0.8; }
+  100% { opacity: 1; }
+} */
+
+/* Info About */
+.info_about {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.info_about_left,
+.info_about_right {
+  width: 720px;
+}
+
+.info_about_left img {
+  width: 519px;
+  margin: 432px 0 0 0;
+}
+
+.info_about_right img:nth-child(1) {
+  width: 613px;
+  height: auto;
+  margin: 0 0 240px 106px;
+}
+
+.info_about_right img:nth-child(2) {
+  width: 582px;
+  height: auto;
+  margin: 0 0 0 15px;
+}
+
+/* Info Brand */
+.info_brand {
+  width: 100%;
+  height: 605px;
+  max-width: 1440px;
+  margin: 240px auto 120px;
+}
+
+.info_brand h4 {
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: -1.43px;
+  line-height: 101px;
+  font-family: 'Mark Pro', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+}
+
+.brand_ul {
+  margin: 200px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.brand_ul li:nth-child(1){
+  width: 275px;
+}
+
+.brand_ul li:nth-child(2),
+.brand_ul li:nth-child(3),
+.brand_ul li:nth-child(4) {
+  width: 332px;
+  padding: 0 0 0 57px;
+  margin: 0 0 0 56px;
+  border-left: 1px solid rgb(235,235,235);
+}
+
+
+.brand_list_1 img {
+  width: 149px;
+  height: 64px;
+}
+
+.brand_list_2 img {
+  width: 160px;
+  height: 64px;
+}
+
+.brand_list_3 img {
+  width: 81px;
+  height: 64px;
+}
+
+.brand_list_4 img {
+  width: 174px;
+  height: 64px;
+}
+
+
+.brand_ul li p {
+  margin: 80px 0 0 0;
+  font-size: 18px;
+  letter-spacing: -0.25px;
+  line-height: 32px;
+  color: rgb(102,102,102);
+  word-break: keep-all;
+}
+
+
+/* Info Ethics */
+.info_ethics {
+  width: 100%;
+  max-width: 1440px;
+  height: 176px;
+  margin: 0 auto 120px;
+}
+
+.ethics {
+  width: 100%;
+  padding: 56px 63px;
+  background-color: rgb(50, 54, 71);
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+ 
+.ethics_desc {
+  display: flex;
+}
+
+.ethics_desc span {
+  width: 22px;
+}
+
+.ethics_desc span img {
+  display: block;
+  margin: 10px 0 0 0;
+  width: 12px;
+  height: 12px;
+  text-align: left;
+}
+
+.ethics_desc p {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  line-height: 32px;
+  color: rgb(255, 255, 255);
+  word-break: keep-all;
+  text-align: left;
+}
+
+.ethics_desc p:hover,
+.ethics_link p:hover {
+  text-decoration: underline;
+}
+
+.ethics_link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ethics_link p {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  line-height: 24px;
+  color: rgb(255, 255, 255);
+}
+
+.ethics_link img {
+  width: 10px;
+  height: 10px;
+  margin: 0 0 0 8px;
+}
+
+/* Info Visual 2 */
+.info_visual_2 {
+  width: 100%;
+  height: 480px;
+  background-image: url(../img/info_visual_2.jpg);
+  background-size: cover;
+}
+
+.visual_2_inner {
+  width: 574px;
+  height: 72px;
+  margin: 0 auto;
+  padding: 250px 0;
+  display: flex;
+  align-items: center;
+}
+
+.visual_2_inner_txt {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  line-height: 36px;
+  color: rgb(255, 255, 255);
+  font-family: 'Mark Pro', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+}
+
+.visual_2_inner_link {
+  display: flex;
+  align-items: center;
+}
+
+.visual_2_inner_link span {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  line-height: 24px;
+  color: #ffe100;
+  font-family: 'Mark Pro', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+}
+
+.visual_2_inner_link img {
+  width: 24px;
+  height: 24px;
+  margin: 0 0 0 6px;
+}
+
