@@ -1,8 +1,8 @@
 /* Footer */
 footer {
     width: 100%;
-    max-width: 1440px;
-    padding: 47px 0 52px 0;
+    max-width: 1600px;
+    padding: 47px 80px 52px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -34,6 +34,7 @@ footer {
 .policy_list li a {
     margin: 0 30px 0 0;
     font-size: 14px;
+    font-weight: bold;
     line-height: 17.78px;
     color: rgb(153,153,153);
 }
@@ -41,7 +42,6 @@ footer {
 .copyright {
     font-size: 14px;
     font-family: 'Mark Pro', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
-    font-weight: bold;
     letter-spacing: -0.25px;
     line-height: 17.78px;
 }
@@ -61,6 +61,7 @@ footer {
 .related_list img {
     width: 10px;
     height: 10px;
+    visibility: hidden;
 }
 
 .related_list li a {
@@ -69,13 +70,13 @@ footer {
     line-height: 23px;
     color:rgb(153, 153, 153);
     font-family: 'Mark Pro', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
-    margin: 0 0 0 27px;
+    margin: 0 0 0 8px;
 }
 
 .share {
     display: flex;
     justify-content: space-between;
-    margin: 25px 0 0 42px;
+    margin: 25px 0 0 24px;
 }
 
 .share strong {
@@ -110,10 +111,11 @@ footer {
 .btn_top img {
     width: 10px;
     height: 10px;
+    visibility: hidden;
 }
 
 .btn_top span {
-    padding: 0 27px;
+    padding: 0 8px;
     font-size: 14px;
     font-family: 'Mark Pro', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
     font-weight: bold;

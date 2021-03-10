@@ -1,0 +1,242 @@
+@font-face {
+  font-family: "Nike TG"; /* 사용할 폰트 이름 */
+  src: url(../font/257c802f-349c-4b4d-aefa-546d5de15ec6.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Nike Futura";
+  src: url(../font/nike-futura.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url(../font/NotoSans-Thin.woff2) format("woff2");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url(../font/NotoSans-Light.woff2) format("woff2");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url(../font/NotoSans-DemiLight.woff2) format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url(../font/NotoSans-Regular.woff2) format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url(../font/NotoSans-Medium.woff2) format("woff2");
+  font-weight: 500;
+}
+
+body {
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: rgb(17, 17, 17);
+}
+
+div, ul, li {
+  background-size: cover;
+  background-position: center center;
+}
+
+/* Layout Style */
+
+button:hover {
+  cursor: pointer;
+}
+
+/* Text Style */
+
+
+h2 {
+  font-family: "Noto Sans KR";
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  letter-spacing: normal;
+}
+
+h4 {
+  font-family: "Noto Sans KR";
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: normal;
+}
+
+.h4_16 {
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: normal;
+}
+
+p {
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+.p_72 {
+  font-family: "Nike Futura";
+  font-size: 72px;
+  line-height: 60px;
+  font-weight: 400;
+}
+
+.p_20 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.p_14 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.p_14_tg {
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.p_12 {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.p_10 {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+/* Color Style */
+
+.c_17 {
+  color: rgb(17, 17, 17);
+}
+
+.c_117 {
+  color: rgb(117, 117, 117);
+}
+
+.c_126 {
+  color: rgb(126, 126, 126);
+}
+
+.c_245 {
+  color: rgb(245, 245, 245);
+}
+
+.c_255 {
+  color: rgb(255, 255, 255);
+}
+
+/* Font Weight */
+.fw_500 {
+  font-weight: 500;
+}
+
+/* Margin */
+.mb_8 {
+  margin-bottom: 8px;
+}
+
+.mb_18 {
+  margin-bottom: 18px;
+}
+
+.mb_24 {
+  margin-bottom: 24px;
+}
+
+.pl_8 {
+  padding-left: 8px;
+}
+
+.pl_56 {
+  padding-left: 56px;
+}
+
+@media screen and (max-width: 639px) {
+
+  h2 {
+    font-family: "Noto Sans KR";
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+    letter-spacing: normal;
+  }
+  
+  h4 {
+    font-family: "Noto Sans KR";
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: normal;
+  }
+  
+  .h4_16 {
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: normal;
+  }
+  
+  p {
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+  
+  .p_72 {
+    font-family: "Nike Futura";
+    font-size: 72px;
+    line-height: 60px;
+    font-weight: 400;
+  }
+  
+  .p_20 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  .p_14 {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  .p_14_tg {
+    font-family: "Noto Sans KR";
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  .p_12 {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  
+  .p_10 {
+    font-size: 10px;
+    font-weight: 400;
+  }
+}
