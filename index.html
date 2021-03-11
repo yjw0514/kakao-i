@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="kakao i" />
+    <meta name="application-name" content="kakao.ai"/>
+
     <title>Kakao i</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header.css">
@@ -11,16 +14,19 @@
     <script src="js/index.js" defer></script>
 </head>
 <body>
-    <header id="gnb_navbar" onmouseover="gnbOver()" onmouseout="gnbOut()">  
+    <header id="gnb_navbar">  
+        <!-- <header id="gnb_navbar" onmouseover="gnbOver()" onmouseout="gnbOut()">   -->
         <!-- Header GNB -->
             <nav class="gnb">
                 <ul class="gnb_content">
                     <li><a href="">
-                        <img class="gnb_content_logo" src="img/logo_white.png"></a></li>
-                    <li><a class="gnb_content_items"href="">소개</a></li>
-                    <li><a class="gnb_content_items"href="">서비스</a></li>
-                    <li><a class="gnb_content_items"href="">제품</a></li>
-                    <li><a class="gnb_content_items"href="">파트너</a></li>    
+                        <img class="gnb_content_logo" src="img/logo_white.png">
+                        </a>
+                    </li>
+                    <li><a class="gnb_content_items" href="">소개</a></li>
+                    <li><a class="gnb_content_items" href="">서비스</a></li>
+                    <li><a class="gnb_content_items" onmouseover="menuOpen1();" onmouseout="menuClose1();" href="">제품</a></li>
+                    <li><a class="gnb_content_items" onmouseover="menuOpen2();" onmouseout="menuClose2();" href="">파트너</a></li>    
                 </ul>
                 <ul class="gnb_link">
                     <li>
@@ -40,27 +46,27 @@
             <ul class="gnb_product">
                 <li>
                     <a href="">
-                        <img src="img/product_1.png" alt="">
+                        <img src="img/product_1.png">
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="img/product_2.png" alt="">
+                        <img src="img/product_2.png">
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="img/product_3.png" alt="">
+                        <img src="img/product_3.png">
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="img/product_4.png" alt="">
+                        <img src="img/product_4.png">
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="img/product_5.png" alt="">
+                        <img src="img/product_5.png">
                     </a>
                 </li>
             </ul>
@@ -83,7 +89,7 @@
         <!-- Main Visual -->
         <div class="main_visual">
             <div class="main_visual_text">
-                <h1>KAKAO<br>INTELIGENCE</h1>
+                <h1>KAKAO<br>INTELLIGENCE</h1>
                 <p>AI를 통해 일상의 모든 것들을 누구나 <br>편리하게 경험하는 세상</p>
             </div>
         </div>
@@ -196,7 +202,7 @@
                 </a>
                 <a class="visual_2_inner_link" href="">
                     <span>Our Partners</span>
-                    <img src="img/arrow_circle.svg" alt="">
+                    <img src="img/arrow_circle.svg">
                 </a>
             </div>
         </div>
@@ -219,45 +225,46 @@
             <div class="info_related">
                 <ul class="related_list">
                     <li>
-                        <img src="img/circle_yellow.svg" alt="">
-                        <a href="">Kakao Enterprise</a>
+                        <img class="circle" src="img/circle_yellow.svg">
+                        <a href="#" 
+                        onmouseover="circleShow(0);" onmouseout="circleNone(0);" >Kakao Enterprise</a>
                     </li>
                     <li>
-                        <img src="img/circle_yellow.svg" alt="">
-                        <a href="">Kakao Enterprise Teck Blog</a>
+                        <img class="circle" src="img/circle_yellow.svg">
+                        <a href="" onmouseover="circleShow(1);" onmouseout="circleNone(1); ">Kakao Enterprise Teck Blog</a>
                     </li>
                     <li>
-                        <img src="img/circle_yellow.svg" alt="">
-                        <a href="">Kakao i Developers</a>
+                        <img class="circle" src="img/circle_yellow.svg">
+                        <a href="" onmouseover="circleShow(2);" onmouseout="circleNone(2);" >Kakao i Developers</a>
                     </li>
                 </ul>
                 <ul class="share">
                     <strong>Share</strong>
                     <li class="share_icons">
                         <a href="">
-                            <img src="img/icon_kakaotalk.svg" alt="">
+                            <img src="img/icon_kakaotalk.svg">
                         </a>
                     </li>
                     <li class="share_icons">
                         <a href="">
-                            <img src="img/icon_kakaostory.png" alt="">
+                            <img src="img/icon_kakaostory.png">
                         </a>
                     </li>
                     <li class="share_icons">
                         <a href="">
-                            <img src="img/icon_facebook.svg" alt="">
+                            <img src="img/icon_facebook.svg">
                         </a>
                     </li>
                     <li class="share_icons">
                         <a href="">
-                            <img src="img/icon_twitter.svg" alt="">
+                            <img src="img/icon_twitter.svg">
                         </a>
                     </li>
                 </ul>
             </div>
             <button class="btn_top">
-                <img src="img/circle_black.svg" alt="">
-                <span>Back to top</span>
+                <img class="circle" src="img/circle_black.svg">
+                <span onmouseover="circleShow(3);" onmouseout="circleNone(3);">Back to top</span>
             </button>
         </div>
     </footer>

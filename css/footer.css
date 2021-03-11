@@ -62,7 +62,9 @@ footer {
     width: 10px;
     height: 10px;
     visibility: hidden;
+    transition: all 0.2s ease-in;
 }
+
 
 .related_list li a {
     font-size: 14px;
@@ -112,6 +114,7 @@ footer {
     width: 10px;
     height: 10px;
     visibility: hidden;
+    transition: all 0.5s ease-in;
 }
 
 .btn_top span {
@@ -121,4 +124,5 @@ footer {
     font-weight: bold;
     letter-spacing: -0.25px;
     line-height: 17.78px;
+    cursor: pointer;
 }

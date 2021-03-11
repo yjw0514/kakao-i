@@ -369,6 +369,11 @@
   font-family: 'Mark Pro', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
 }
 
+.visual_2_inner_txt:hover,
+.visual_2_inner_link span:hover {
+  text-decoration: underline;
+}
+
 .visual_2_inner_link {
   display: flex;
   align-items: center;
