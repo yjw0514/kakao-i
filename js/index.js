@@ -138,14 +138,6 @@ function menuClose1() {
 }
 
 // 파트너 메뉴 열고 닫기
-
-// function menuOpen2() {
-//     document.querySelector('.sub_gnb_partner').style = "display:block;";
-// }
-// function menuClose2() {
-//     document.querySelector('.sub_gnb_partner').style = "display:none;";
-// }
-
 function menuOpen(target) {
 
     for (let i=0; i<2; i++)
@@ -184,36 +176,36 @@ function circleNone(target) {
 }
 
 
-// Max-width 1440
+// Max-width 1440(Tablet)
 // header gnb
 
-const burger = document.querySelector('.gnb_m_burger');
+// const burger = document.querySelector('.gnb_m_burger');
 
-const navSlide = () => {
-//   const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.gnb_m_items');
-  const navLinks = document.querySelectorAll('.gnb_m_items li');
+// const navSlide = () => {
+// //   const burger = document.querySelector('.burger');
+//   const nav = document.querySelector('.gnb_m_items');
+//   const navLinks = document.querySelectorAll('.gnb_m_items li');
 
-  burger.addEventListener('click', () => {
-    //burger toggle
-    nav.classList.toggle('nav-active');
+//   burger.addEventListener('click', () => {
+//     //burger toggle
+//     nav.classList.toggle('nav-active');
 
-    //links animation
-    navLinks.forEach((link, index) => {
-      console.log(index);
-      if (link.style.animation) {
-        link.style.animation = '';
-      } else {
-        link.style.animation = `navLinkFade 0.5s ease forwards ${
-          index / 7 + 0.8
-        }s`;
-      }
-    });
+//     //links animation
+//     navLinks.forEach((link, index) => {
+//       console.log(index);
+//       if (link.style.animation) {
+//         link.style.animation = '';
+//       } else {
+//         link.style.animation = `navLinkFade 0.5s ease forwards ${
+//           index / 7 + 0.8
+//         }s`;
+//       }
+//     });
 
-    //burger cross
-    burger.classList.toggle('toggle');
-  });
-};
+//     //burger cross
+//     burger.classList.toggle('toggle');
+//   });
+// };
 
 navSlide();
 // footer m Btn Cross
