@@ -14,19 +14,28 @@
     <script src="js/index.js" defer></script>
 </head>
 <body>
-    <header id="gnb_navbar">  
-        <!-- <header id="gnb_navbar" onmouseover="gnbOver()" onmouseout="gnbOut()">   -->
+    <header>  
         <!-- Header GNB -->
-            <nav class="gnb">
+        <nav id="gnb_navbar" >
+            <div class="gnb">
                 <ul class="gnb_content">
                     <li><a href="">
                         <img class="gnb_content_logo" src="img/logo_white.png">
                         </a>
                     </li>
-                    <li><a class="gnb_content_items" href="">소개</a></li>
-                    <li><a class="gnb_content_items" href="">서비스</a></li>
-                    <li><a class="gnb_content_items" onmouseover="menuOpen1();" onmouseout="menuClose1();" href="">제품</a></li>
-                    <li><a class="gnb_content_items" onmouseover="menuOpen2();" onmouseout="menuClose2();" href="">파트너</a></li>    
+                    <li>
+                        <a class="gnb_content_items" href="">소개</a>
+                        <div class="underline"></div>
+                    </li>
+                    <li>
+                        <a class="gnb_content_items" href="">서비스</a>
+                    </li>
+                    <li>
+                        <a class="gnb_content_items" onmouseover="menuOpen(0);" onmouseout="menuClose();" href="">제품</a>
+                    </li>
+                    <li>
+                        <a class="gnb_content_items" onmouseover="menuOpen(1);" onmouseout="menuClose();" href="">파트너</a>
+                    </li>    
                 </ul>
                 <ul class="gnb_link">
                     <li>
@@ -39,49 +48,109 @@
                         </a>
                     </li>
                 </ul>
-            </nav>
+            </div>
+            <!-- Sub menu -->
+        <nav class="gnb_sub" onmouseover="menuOpenKeep()"  onmouseout="menuClose()">
+            <div class="gnb_sub_wrap">
+                <div class="gnb_sub_div_1">
+                    <ul class="gnb_sub_div_ul_1">
+                        <li>
+                            <a href="">
+                                <img src="img/product_1.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/product_2.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/product_3.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/product_4.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/product_5.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+                <div class="gnb_sub_wrap">
+                    <div class="gnb_sub_div_2">
+                        <ul class="gnb_sub_div_ul_2">
+                            <li><a href="">카카오톡</a></li>
+                            <li><a href="">자동차</a></li>
+                            <li><a href="">내비게이션</a></li>
+                            <li><a href="">스마트악세서리</a></li>
+                            <li><a href="">디스플레이</a></li>
+                            <li><a href="">스마트홈</a></li>
+                        </ul>
+                    </div>
+                </div>
+           
+        </nav>
+        </nav>   
+        <!-- Mobile gnb(max767px) -->
+        <!-- <nav class="gnb_m">
+            <div class="gnb_m_wrap">
+                <div class="gnb_m_logo">
+                    <a href="">
+                    <img class="gnb_m_logo" src="img/logo_white.png">
+                    </a>
+                </div>
+                <div class="gnb_m_menu">
+                    <a href="">
+                        <img class="gnb_content_logo" src="img/icon_menu_main.png">
+                        </a>
+                </div>
+            </div>
+        </nav> -->
 
-        <!-- Sub GNB Product -->
-        <nav class="sub_gnb_product">
-            <ul class="gnb_product">
-                <li>
+        <!-- <ul class="gnb_link">
+            <li>
+                <a class="gnb_link_items" href="">AI 알고리즘 윤리</a>
+            </li>
+            <li>
+                <a href=""> 
+                    <div class="burger">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                    <span class="gnb_link_items">제휴문의</span>
+                </a>
+            </li>
+        </ul> -->
+
+
+        <nav class="gnb_m_wrap">
+            <div class="gnb_m">
+                <div class="gnb_m_logo">
                     <a href="">
-                        <img src="img/product_1.png">
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="img/product_2.png">
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="img/product_3.png">
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="img/product_4.png">
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="img/product_5.png">
-                    </a>
-                </li>
-            </ul>
+                        <img class="gnb_m_logo" src="img/logo_white.png">
+                        </a>
+                </div>
+                <ul class="gnb_m_items">
+                    <li><a href="#">소개</a></li>
+                    <li><a href="#">서비스</a></li>
+                    <li><a href="#">제품</a></li>
+                    <li><a href="#">파트너</a></li>
+                </ul>
+                <div class="gnb_m_burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
         </nav>
-        <!-- Sub GNB Partner-->
-        <nav class="sub_gnb_partner">
-            <ul class="gnb_partner">
-                <li><a href="">카카오톡</a></li>
-                <li><a href="">자동차</a></li>
-                <li><a href="">내비게이션</a></li>
-                <li><a href="">스마트악세서리</a></li>
-                <li><a href="">디스플레이</a></li>
-                <li><a href="">스마트홈</a></li>
-            </ul>
-        </nav>
+        
     </header>
 
     <!-- Main -->
@@ -127,7 +196,7 @@
         </div>
         <!-- Info Visual -->
         <div class="info_visual">
-            <img src="img/info_visual.jpg">
+            <!-- <img src="img/info_visual.jpg"> -->
         </div>
         <!-- Info Description 2 -->
         <div class="info_desc_2">
@@ -142,7 +211,7 @@
         <div class="info_effect_sticky">
             <span></span>
             <div class="inner_info">
-                <p>We are everywhere</p>
+                <p class="inner_info_text">We are everywhere</p>
             </div>
         </div>
         <!-- Info About -->
@@ -152,6 +221,18 @@
             </div>
             <div class="info_about_right">
                 <img src="img/info_about_2.jpg">
+                <img src="img/info_about_3.jpg">
+            </div>
+        </div>
+        <!-- Info About m -->
+        <div class="info_about_m">
+            <div class="info_about_2_m">
+                <img src="img/info_about_2.jpg">
+            </div>
+            <div class="info_about_1_m">
+                <img src="img/info_about_1.jpg">
+            </div>
+            <div class="info_about_3_m">
                 <img src="img/info_about_3.jpg">
             </div>
         </div>
@@ -208,7 +289,7 @@
         </div>
     </main>
     <!-- Footer -->
-    <footer>
+    <footer class="footer_1">
         <div class="footer_left">
             <a><img src="img/logo.png"></a>
             <div class="info_policy">
@@ -225,16 +306,19 @@
             <div class="info_related">
                 <ul class="related_list">
                     <li>
-                        <img class="circle" src="img/circle_yellow.svg">
+                        <div class="circle"></div>
+                        <!-- <img class="circle" src="img/circle_yellow.svg"> -->
                         <a href="#" 
                         onmouseover="circleShow(0);" onmouseout="circleNone(0);" >Kakao Enterprise</a>
                     </li>
                     <li>
-                        <img class="circle" src="img/circle_yellow.svg">
+                        <div class="circle"></div>
+                        <!-- <img class="circle" src="img/circle_yellow.svg"> -->
                         <a href="" onmouseover="circleShow(1);" onmouseout="circleNone(1); ">Kakao Enterprise Teck Blog</a>
                     </li>
                     <li>
-                        <img class="circle" src="img/circle_yellow.svg">
+                        <div class="circle"></div>
+                        <!-- <img class="circle" src="img/circle_yellow.svg"> -->
                         <a href="" onmouseover="circleShow(2);" onmouseout="circleNone(2);" >Kakao i Developers</a>
                     </li>
                 </ul>
@@ -263,10 +347,78 @@
                 </ul>
             </div>
             <button class="btn_top">
-                <img class="circle" src="img/circle_black.svg">
+                <div class="circle"></div>
+                <!-- <img class="circle" src="img/circle_black.svg"> -->
                 <span onmouseover="circleShow(3);" onmouseout="circleNone(3);">Back to top</span>
             </button>
+
         </div>
     </footer>
+    <!-- footer_m -->
+    <footer class="footer_m">
+        <div class="footer_m_logo">
+        <a><img src="img/logo_m.png"></a>
+        </div>
+        <div class="info_m_1">
+            <ul class="policy_list_m">
+                <li><a href="">서비스 약관</a></li>
+                <li><a href="">개인정보 취급방침</a></li>
+                <li><a href="">제휴제안 문의</a></li>
+                <li><a href="">고객센터</a></li>
+            </ul>
+            <div class="share_m">
+                <strong>Share</strong>
+                <ul class="share_m_ul">
+                    <li class="share_icons_m">
+                        <a href="">
+                            <img src="img/icon_kakaotalk.svg">
+                        </a>
+                    </li>
+                    <li class="share_icons_m">
+                        <a href="">
+                            <img src="img/icon_kakaostory.png">
+                        </a>
+                    </li>
+                    <li class="share_icons_m">
+                        <a href="">
+                            <img src="img/icon_facebook.svg">
+                        </a>
+                    </li>
+                    <li class="share_icons_m">
+                        <a href="">
+                            <img src="img/icon_twitter.svg">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="info_related_m">
+            <div class="info_related_m_tit">
+                <h3><a href="">관련 사이트</a></h3>
+                <div class="line_m_btn">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                </div>
+            </div>
+            <ul class="info_related_list_m">
+                <li>
+                    <a href="">Kakao Enterprise</a>
+                </li>
+                <li>
+                    <a href="">Kakao Enterprise Teck Blog</a>
+                </li>
+                <li>
+                    <a href="" >Kakao i Developers</a>
+                </li>
+            </ul>
+        </div>
+        <div class="copyright_m">
+            <small>© <a>Kakao Enterprise.</a><br> The Kakao i is a trademark of Kakaocorp.</small>
+        </div>
+        <div class="btntop_m">
+            <button>↑</button>
+        </div>
+    </footer>
+
 </body>
 </html>
