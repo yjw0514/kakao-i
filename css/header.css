@@ -166,7 +166,7 @@
 
 /* Mobile gnb */
 .gnb_m_wrap {
-  /* display: none; */
+  display: none;
 }
 
 
@@ -197,19 +197,24 @@
   .gnb_m {
     width: 100%;
     background-color: transparent;
-    height: 100vh;
+    height: 56px;
     position: fixed;
+    padding: 0 15px;
     top: 0;
     left: 0;
-    /* overflow: hidden; */
+    overflow: hidden;
     z-index: 10000;
     transition: height 0.6s, background-color 0.6s;
+  }
+
+  .nav-active{
+    background-color: white;
+    height: 100%;
   }
   
   .gnb_m_nav {
     width: 100%;
     max-width: 700px;
-    padding: 0 15px;
     height: 56px;
     display: flex;
     justify-content: space-between;
@@ -220,11 +225,60 @@
     width: 80px;
     margin: auto 0;
   }
+
+  .gnb_m_burger{
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.4s ease;
+  }
+  
+  /* .gnb_line1,
+  .gnb_line2,
+  .gnb_line3 {
+    width: 24px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    margin: 8px;
+    transition: all 0.8s ease;
+  }  */
+
+  .gnb_m_burger div {
+    width: 24px;
+    height: 2px;
+    background-color: rgb(252,252,252);
+    margin: 8px;
+    transition: all 0.4s ease;
+  } 
+
+  .toggle .gnb_line1 {
+    transform: rotate(-45deg) translate(-6px, 8px);
+  }
+  
+  .toggle .gnb_line2 {
+    opacity: 0;
+  }
+  
+  .toggle .gnb_line3 {
+    transform: rotate(45deg) translate(-6px, -8px);
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  
   
   .gnb_m_hidden {
     width:100%;
-    height: 100%;
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
   }
 
@@ -232,7 +286,6 @@
     margin: 40px 0 0 0;
     width: 100%;
     height: 250px;
-    padding: 0 0 0 15px;
     transition: all 0.8s ease-in;
   }
   
@@ -247,13 +300,14 @@
     line-height: 45px;
     font-weight: 700;
     font-size: 30px;
-    padding: 0 0 16px 0;
-  }
-  
-  .gnb_m_items li:nth-child(1) a {
-    color: rgb(3, 4, 5);
+    padding: 0 0 16px 0; 
+    animation: gnbItemFade 0.5s ease forwards;
   }
 
+  .gnb_m_items li:nth-child(1) a {
+    color: rgb(3, 4, 5);  
+  }
+  
   .gnb_m_items li:nth-child(2) a,
   .gnb_m_items li:nth-child(3) a,
   .gnb_m_items li:nth-child(4) a {
@@ -261,28 +315,16 @@
   }
 
   
-  .gnb_m_burger{
-    /* display: none; */
-    cursor: pointer;
-  }
-  
-  .gnb_m_burger div {
-    width: 24px;
-    height: 2px;
-    background-color: rgb(252, 252, 252);
-    margin: 10px;
-    transition: all 0.5s ease;
-  }
   
   .gnb_m_info {
     width: 100%;
     height: 236px;
-    padding: 68px 15px 0;
+    padding: 68px 0 0;
     margin: 100px 0 0 0;
     display: flex;
-      flex-direction: column;
-      justify-content: left;
-  }
+    flex-direction: column;
+    justify-content: left;
+}
 
   .gnb_m_share {
       display: flex;

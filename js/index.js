@@ -1,40 +1,12 @@
 'use strict';
-// gnbOver()
-// function gnbOver() {
-    
-//     document.getElementById('gnb_navbar').style = "background-color:white; box-shadow: 0 0 6px 0 rgba(75,75,75,0.8); transition: all 0.6s ease;";
-//     document.querySelector('.gnb_content_logo').src = "img/logo_black.png";
-    
-//     for ( let i=0; i<4; i++) {
-//         document.querySelectorAll('.gnb_content_items')[i].style = "color: #666;";
-//     }
-//     for ( let i=0; i<2; i++) {
-//         document.querySelectorAll('.gnb_link_items')[i].style = "color: #666;";
-//     }
-//     document.querySelector('.gnb_link_icon').src = "img/link_black.svg";
-    
-//  }
 
-// gnbOut()
-//  function gnbOut() {
-//     document.getElementById('gnb_navbar').style = "background-color:transparent; transition: all 0.6s ease;";
-//     document.querySelector('.gnb_content_logo').src = "img/logo_white.png";
+// JS
 
-//     for ( let i=0; i<4; i++) {
-//         document.querySelectorAll('.gnb_content_items')[i].style = "color:white;";
-//     }
-//     for ( let i=0; i<2; i++) {
-//         document.querySelectorAll('.gnb_link_items')[i].style = "color:white;";
-//     }
-//     document.querySelector('.gnb_link_icon').src = "img/link_white.svg";  
-// }
-
-
+// 스크롤 내려가지 않았을 때 gnbOver()
 
 const navbar = document.getElementById('gnb_navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 
-// 스크롤 내려가지 않았을 때 gnbOver()
 navbar.addEventListener('mouseover', () => {
     
     if (window.scrollY <= navbarHeight) {
@@ -176,38 +148,8 @@ function circleNone(target) {
 }
 
 
-// Max-width 1440(Tablet)
-// header gnb
 
-// const burger = document.querySelector('.gnb_m_burger');
-
-// const navSlide = () => {
-// //   const burger = document.querySelector('.burger');
-//   const nav = document.querySelector('.gnb_m_items');
-//   const navLinks = document.querySelectorAll('.gnb_m_items li');
-
-//   burger.addEventListener('click', () => {
-//     //burger toggle
-//     nav.classList.toggle('nav-active');
-
-//     //links animation
-//     navLinks.forEach((link, index) => {
-//       console.log(index);
-//       if (link.style.animation) {
-//         link.style.animation = '';
-//       } else {
-//         link.style.animation = `navLinkFade 0.5s ease forwards ${
-//           index / 7 + 0.8
-//         }s`;
-//       }
-//     });
-
-//     //burger cross
-//     burger.classList.toggle('toggle');
-//   });
-// };
-
-navSlide();
+// JS (max-width 1440px) 
 // footer m Btn Cross
 
 let openstate = false;
@@ -235,5 +177,151 @@ function footerCross() {
         footerCross();
     });
     
+
+
+// JS (max-width 767px) 
+// gnboverM()
+
+let navbarm = document.querySelector('.gnb_m_wrap');
+const navbarHeightm = navbarm.getBoundingClientRect().height;
+
+navbarm.addEventListener('mouseover', () => {
+
+    function gnbOverM() {
+    
+        document.querySelector('.gnb_m').style = "background-color:white; box-shadow: 0 0 6px 0 rgba(75,75,75,0.8); transition: all 0.6s ease;";
+        document.querySelector('.gnb_m_logo').src = "img/logo_black.png";
+
+        for ( let i=0; i<3; i++) {
+            document.querySelectorAll('.gnb_m_burger div')[i].style = "background-color: rgb(16, 16, 16); ";
+        }
+    }
+
+    if (window.scrollY <= navbarHeightm) {
+        gnbOverM();
+    }
+});
+
+// gnb_m_out
+// navbarm.addEventListener('mouseout', () => {
+//     function gnbOutM() {
+//         document.querySelector('.gnb_m').style = "background-color:transparent; transition: all 0.6s ease;";
+//         document.querySelector('.gnb_m_logo').src = "img/logo_white.png";
+    
+//         for ( let i=0; i<3; i++) {
+//             document.querySelectorAll('.gnb_m_burger div')[i].style = "background-color: rgb(252, 252, 252);";
+//         } 
+    
+//     }       
+//     if (window.scrollY <= navbarHeightm) {
+//         gnbOutM();
+//     }    
+// }) ;
+
+navbarm.addEventListener('mouseout', onMouseOut)
+
+function onMouseOut() {
+    
+    function gnbOutM() {
+        document.querySelector('.gnb_m').style = "background-color:transparent; transition: all 0.6s ease;";
+        document.querySelector('.gnb_m_logo').src = "img/logo_white.png";
+    
+        for ( let i=0; i<3; i++) {
+            document.querySelectorAll('.gnb_m_burger div')[i].style = "background-color: rgb(252, 252, 252);";
+        } 
+    
+    }       
+    if (window.scrollY <= navbarHeightm) {
+        gnbOutM();
+    }    
+    
+}
+
+
+
+
+// 스크롤 움직일 때 gnb over & out
+document.addEventListener('scroll', () => {
+
+    // Scroll Down
+    function gnbScrollDownM() {
+        document.querySelector('.gnb_m').style = "background-color:white; box-shadow: 0 0 6px 0 rgba(75,75,75,0.8); transition: all 0.6s ease;";
+        document.querySelector('.gnb_m_logo').src = "img/logo_black.png";
+
+        for ( let i=0; i<3; i++) {
+            document.querySelectorAll('.gnb_m_burger div')[i].style = "background-color: rgb(16, 16, 16); ";
+        }
+    }
+    
+    // Scroll Up
+    function gnbScrollUpM() {
+        document.querySelector('.gnb_m').style = "background-color:transparent; transition: all 0.6s ease;";
+        document.querySelector('.gnb_m_logo').src = "img/logo_white.png";
+
+        for ( let i=0; i<3; i++) {
+            document.querySelectorAll('.gnb_m_burger div')[i].style = "background-color: rgb(252, 252, 252);";
+        }    
+    }
+
+    // 조건문 실행
+    if (window.scrollY > navbarHeight) {
+        gnbScrollDownM();
+        }
+    
+        else {
+           gnbScrollUpM();
+            }
+    });
+
+
+// gnb_m_hidden
+
+
+const navSlide = () => {
+  const burger = document.querySelector('.gnb_m_burger');
+  const nav = document.querySelector('.gnb_m');
+  const navLinks = document.querySelectorAll('.gnb_m_items li');
+  const body = document.querySelector('body');
+
+  burger.addEventListener('click', () => {
+  
+    //burger toggle
+    nav.classList.toggle('nav-active')
+    if(nav.className === 'gnb_m nav-active'){
+    navbarm.removeEventListener('mouseout' , onMouseOut)
+    body.style.overflow = "hidden";
+    }
+    else {
+    navbarm.addEventListener('mouseout' , onMouseOut)
+    body.style.overflow = "auto";
+    }
+    console.log(nav.className === 'gnb_m nav-active')
+    //links animation
+    navLinks.forEach((link, index) => {
+      console.log(index);
+      if (link.style.animation) {
+        link.style.animation = '';
+      } else {
+        link.style.animation = `navLinkFade 0.5s ease forwards ${
+          index / 7 + 0.8
+        }s`;
+      }
+    });
+
+    //burger cross
+    burger.classList.toggle('toggle');
+  });
+};
+
+navSlide();
+
+
+
+//  back to top btn
+const button = document.querySelector('button');
+      document.addEventListener('click', () => {
+        navbarm.scrollIntoView({behavior:'smooth', block: 'center'});
+      });
+
 
 

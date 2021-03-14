@@ -99,7 +99,7 @@
 }
 
 /* Info visual */
-.info_visual {
+/* .info_visual {
   width: 100%;
   max-width: 1600px;
   height: 900px;
@@ -109,14 +109,18 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-}
+} */
 
-/* .info_visual img {
-  display: block;
+.info_visual_pc {
   width: 100%;
   max-width: 1600px;
   margin: 200px auto 0;
-} */
+  padding: 0 80px;
+}
+
+.info_visual_767 {
+  display: none;
+}
 
 /* Info Description 2  */
 .info_desc_2 {
@@ -140,6 +144,7 @@
 /* Info effect sticky */
 .info_effect_sticky {
   width: 100%;
+  max-width: 1600px;
   height: 2200px;
 }
 
@@ -378,9 +383,10 @@
 /* Info Visual 2 */
 .info_visual_2 {
   width: 100%;
-  height: 480px;
+  height: auto;
   background-image: url(../img/info_visual_2.jpg);
   background-size: cover;
+  background-position: center center;
 }
 
 .visual_2_inner {
@@ -506,14 +512,6 @@
     word-break: keep-all;
   }
 
-  /* Info visual */
-  .info_visual {
-    padding: 0 30px;
-  }
-
-  .info_visual img {
-    max-width: 1280px;
-  }
 
   /* Info Description 2  */
   .info_desc_2 {
@@ -525,6 +523,7 @@
   /* Info effect sticky */
   .info_effect_sticky {
     width: 100%;
+    max-width: 1280px;
     height: 2200px;
   }
 
@@ -674,7 +673,8 @@
   /* Main Visual */
   .main_visual {
     width: 100%;
-    height: 1000px;
+    max-width: 767px;
+    /* height: 700px; */
     background-image: url(../img/main_visual_767.jpg);
   }
 
@@ -750,12 +750,15 @@
 }
 
 /* Info visual */ 
-.info_visual {
+.info_visual_pc {
+  display: none;
+}
+
+.info_visual_767 {
+  display: block;
   width: 100%;
-  height: 1000px;
   padding: 0;
   margin: 120px 0;
-  background-image: url(../img/info_visual_767.jpg);
 }
 
 /* Info Description 2  */
@@ -768,6 +771,7 @@
 /* Info effect sticky */
 .info_effect_sticky {
   width: 100%;
+  max-width: 767px;
   height: 2200px;
 }
 
@@ -898,6 +902,7 @@
 /* Info Visual 2 */
 .info_visual_2 {
   width: 100%;
+  max-width: 767px;
   height: 560px;
   padding: 0 15px;
   background-image: url(../img/info_visual_2_767.jpg);
