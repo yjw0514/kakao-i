@@ -238,12 +238,8 @@ function onMouseOut() {
 }
 
 
-
-
-// 스크롤 움직일 때 gnb over & out
-document.addEventListener('scroll', () => {
-
-    // Scroll Down
+// ***************************
+function scrollUpDown() {
     function gnbScrollDownM() {
         document.querySelector('.gnb_m').style = "background-color:white; box-shadow: 0 0 6px 0 rgba(75,75,75,0.8); transition: all 0.6s ease;";
         document.querySelector('.gnb_m_logo').src = "img/logo_black.png";
@@ -271,7 +267,42 @@ document.addEventListener('scroll', () => {
         else {
            gnbScrollUpM();
             }
-    });
+}
+
+document.addEventListener('scroll', scrollUpDown)
+
+// 스크롤 움직일 때 gnb over & out
+// document.addEventListener('scroll', () => {
+
+//     // Scroll Down
+//     function gnbScrollDownM() {
+//         document.querySelector('.gnb_m').style = "background-color:white; box-shadow: 0 0 6px 0 rgba(75,75,75,0.8); transition: all 0.6s ease;";
+//         document.querySelector('.gnb_m_logo').src = "img/logo_black.png";
+
+//         for ( let i=0; i<3; i++) {
+//             document.querySelectorAll('.gnb_m_burger div')[i].style = "background-color: rgb(16, 16, 16); ";
+//         }
+//     }
+    
+//     // Scroll Up
+//     function gnbScrollUpM() {
+//         document.querySelector('.gnb_m').style = "background-color:transparent; transition: all 0.6s ease;";
+//         document.querySelector('.gnb_m_logo').src = "img/logo_white.png";
+
+//         for ( let i=0; i<3; i++) {
+//             document.querySelectorAll('.gnb_m_burger div')[i].style = "background-color: rgb(252, 252, 252);";
+//         }    
+//     }
+
+//     // 조건문 실행
+//     if (window.scrollY > navbarHeight) {
+//         gnbScrollDownM();
+//         }
+    
+//         else {
+//            gnbScrollUpM();
+//             }
+//     });
 
 
 // gnb_m_hidden
@@ -290,6 +321,9 @@ const navSlide = () => {
     if(nav.className === 'gnb_m nav-active'){
     navbarm.removeEventListener('mouseout' , onMouseOut)
     body.style.overflow = "hidden";
+    // *********
+    navbarm.removeEventListener('mouseon' , scrollUpDown)
+    navbarm.removeEventListener('mouseout' , scrollUpDown)
     }
     else {
     navbarm.addEventListener('mouseout' , onMouseOut)
@@ -318,8 +352,9 @@ navSlide();
 
 
 //  back to top btn
-const button = document.querySelector('button');
-      document.addEventListener('click', () => {
+const button = document.querySelector('.btn_click');
+const scrollInto = document.querySelector('.btn_click');
+      button.addEventListener('click', () => {
         navbarm.scrollIntoView({behavior:'smooth', block: 'center'});
       });
 
