@@ -646,6 +646,7 @@
   .info_ethics {
     max-width: 1280px;
     padding: 0 30px;
+    margin: 0 auto 100px;
   }
 
   .ethics {
@@ -904,6 +905,7 @@
 /* Info Ethics */
 .info_ethics {
   width: 100%;
+  max-width: 700px;
   height: 244px;
   padding: 0 15px;
   margin: 0 auto 80px;
@@ -917,7 +919,7 @@
 }
 
 .ethics_desc {
-  width: 100%;
+  width: 90%;
   height: 124px;
   display: block;
 }

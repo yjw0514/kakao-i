@@ -160,7 +160,7 @@ function footerCross() {
     if (openstate) {
         document.querySelector('.info_related_m').style = "height: 40px;"
         document.querySelector('.info_related_m_tit').style = "border-bottom: none"
-        document.querySelector('.line1').style = " transform: rotate(-90deg) translate(-1px, 0.1px); background-color: rgb(186, 186, 186);"
+        document.querySelector('.line1').style = " opacity: 1; transform: rotate(-90deg) translate(-1px, 0.1px); background-color: rgb(186, 186, 186);"
         document.querySelector('.line2').style = " background-color: rgb(186, 186, 186);"
         openstate = false;
         

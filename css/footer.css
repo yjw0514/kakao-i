@@ -47,6 +47,10 @@
     line-height: 17.78px;
 }
 
+.copyright a {
+    color: rgb(153,153,153);
+}
+
 .footer_right {
     /* width: 40%; */
     display: flex;
@@ -282,8 +286,13 @@
 }
 
 .line1 {
+    opacity: 0;
     transform: rotate(-90deg) translate(-1px, 0.1px);
 }
+
+/* .line1 {
+    opacity: 0;
+} */
 
 .info_related_m h3 a {
     font-size: 14px;
@@ -324,6 +333,10 @@
 .copyright_m {
     width: 100%;
     margin: 50px 0 0 0;
+}
+
+.copyright_m a {
+    color: rgb(153,153,153);
 }
 
 .copyright_m small{
