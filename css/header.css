@@ -265,12 +265,12 @@
   @keyframes navLinkFade {
     from {
       opacity: 0;
-      transform: translateX(0px);
+      transform: translateY(0px);
     }
   
     to {
       opacity: 1;
-      transform: translateX(10px);
+      transform: translateY(10px);
     }
   }
   
