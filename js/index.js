@@ -153,7 +153,8 @@ function circleNone(target) {
 // footer m Btn Cross
 
 let openstate = false;
-const footerBtn = document.querySelector('.line_m_btn');
+// const footerBtn = document.querySelector('.line_m_btn');
+const footerBtn = document.querySelector('.info_related_m_tit');
 function footerCross() {
     
     if (openstate) {

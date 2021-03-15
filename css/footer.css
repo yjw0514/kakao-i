@@ -262,6 +262,7 @@
     margin: 41px 0 0 0;
     height: 32px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .info_related_m_tit {
