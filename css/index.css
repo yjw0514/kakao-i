@@ -715,7 +715,7 @@
   }
 
   .main_visual_text p {
-    max-width: 500px;
+    width: 80%;
     font-size: 30px;
     font-weight: 700;
     letter-spacing: -0.25px;
@@ -725,7 +725,6 @@
 
   .main_visual_text p br {
     display: none;
-    word-break: keep-all;
   }
 
   /* Info Desc */
