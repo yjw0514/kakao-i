@@ -291,6 +291,7 @@
   
   .gnb_m_items li {
     height: 60.8px;
+    opacity: 0;
   }
 
   .gnb_m_items a {
