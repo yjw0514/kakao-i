@@ -30,10 +30,6 @@
   width: 80px;
   margin: 0 75px 0 0;
   padding: 10px 0;
-  /* font-size: 28px;
-  color: rgb(255, 255, 255);
-  line-height: 60px;
-  padding: 10px 0; */
 }
 
 .gnb_content li {
@@ -220,16 +216,6 @@
     text-align: center;
     transition: all 0.4s ease;
   }
-  
-  /* .gnb_line1,
-  .gnb_line2,
-  .gnb_line3 {
-    width: 24px;
-    height: 2px;
-    background-color: rgb(255, 255, 255);
-    margin: 8px;
-    transition: all 0.8s ease;
-  }  */
 
   .gnb_m_burger div {
     width: 24px;
