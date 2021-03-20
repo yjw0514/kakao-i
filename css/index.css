@@ -138,7 +138,7 @@
 /* Info effect sticky */
 .info_effect_sticky {
   width: 100%;
-  height: 2500px;
+  height: 3000px;
 }
 
 .inner_info {
@@ -164,14 +164,50 @@
   z-index: 10;
 }
 
+.info_effect_sticky_t,
+.info_effect_sticky_m {
+  display: none;
+}
+
 /* Info About */
 .info_about {
   width: 100%;
   max-width: 1600px;
   padding: 0 80px;
   /* margin: 400px auto 0; */
-  margin: 100px auto 0;
+  margin: -100px auto 0;
   display: flex;
+}
+
+.info_about_left,
+.info_about_right {
+  width: 720px;
+}
+
+.info_about_left img {
+  width: 519px;
+  margin: 432px 0 0 0;
+}
+
+.info_about_right img:nth-child(1) {
+  width: 613px;
+  height: auto;
+  margin: 0 0 240px 106px;
+}
+
+.info_about_right img:nth-child(2) {
+  width: 582px;
+  height: auto;
+  margin: 0 0 0 15px;
+}
+
+/* Info About m */
+.info_about_m {
+  width: 100%;
+  max-width: 700px;
+  padding: 0 15px;
+  display: none;
+  margin: 200px 0 0 0;
 }
 
 .info_about_left,
@@ -495,31 +531,34 @@
   }
 
   /* Info effect sticky */
-  .info_effect_sticky {
+  .info_effect_sticky,
+  .info_effect_sticky_m {
+    display: none;
+  }
+
+  .info_effect_sticky_t {
+    display: block;
     width: 100%;
     height: 1400px;
   }
 
-  .inner_info {
+  .inner_info_t {
     width: 100%;
     height: 100%;
-    padding: 200px 0;
-    background-color: rgb(253, 223, 29);
-    animation: scroll_sticky 3s forwards 0.2s;
+    padding: 100px 0 0;
+    background-color: transparent;
   }
 
-  .inner_info p {
+  .inner_info_t p {
     font-size: 130px;
     letter-spacing: -2.5px;
     line-height: 165px;
-
-
     font-weight: 700;
     font-family: 'Mark Pro', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
     color: rgb(37, 37, 37);
     text-align: center;
     position: sticky;
-    top: 179px;
+    top: 300px;
     bottom: 0;
     z-index: 10;
   }
@@ -528,8 +567,9 @@
   .info_about {
     max-width: 1280px;
     padding: 0 30px;
-    margin: 200px 0 0 0;
+    margin: -100px 0 0 0;
   }
+
 
   .info_about_left,
   .info_about_right {
@@ -773,26 +813,37 @@
 
 
 /* Info effect sticky */
-.info_effect_sticky {
+.info_effect_sticky,  
+.info_effect_sticky_t {
+    display: none;
+  }
+
+.info_effect_sticky_m {
+  display: block;
   width: 100%;
   max-width: 767px;
+  height: 2000px;
+  margin: auto;
 }
 
-.inner_info {
+.inner_info_m {
   width: 100%;
   height: 100%;
-  background-color: rgb(253, 223, 29);
-  animation: scroll_sticky 3s forwards 0.2s;
+  background-color: transparent;
 }
 
-.inner_info p {
+.inner_info_m p {
   width: 100%;
-  font-size: 40px;
+  font-family: 'Mark Pro', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+  font-weight: 700;
+  font-size: 90px;
   line-height: 127px;
+  text-align: center;
   position: sticky;
-  top: 179px;
-  bottom: 0;
+  top: 350px;
+  left: 200px;
   z-index: 10;
+  color: rgb(37, 37, 37);
 }
 
 /* Info About */
@@ -800,8 +851,10 @@
   display: none;
 }
 
+
 .info_about_m {
   display:block;
+  margin: -100px 0 0 0;
 }
 
 

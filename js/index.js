@@ -314,54 +314,156 @@ const scrollInto = document.querySelector('.btn_click');
 let scrollY = window.pageYOffset;
 let pageHieght = document.documentElement.clientHeight;
 let aniEleY = document.querySelector('.info_effect_sticky').offsetTop;
+let aniEleY2 = document.querySelector('.info_effect_sticky_t').offsetTop;
+let aniEleY3 = document.querySelector('.info_effect_sticky_m').offsetTop;
 
 
-function scrollFadeIn() {
-    var scrollY = window.pageYOffset;
-
-    if (scrollY > aniEleY - pageHieght ) {
-        var disY = scrollY - aniEleY + pageHieght
-        if (disY >=0 && disY <1000) {
-            document.querySelector('.inner_info').style = "background-color: transparent;";
-            document.querySelector('.inner_info p').style = "opacity: 0.1;";
+// 1920
+document.addEventListener('scroll', () => {
+    function scrollFadeIn() {
+        var scrollY = window.pageYOffset;
+    
+        if (scrollY > aniEleY - pageHieght ) {
+            var disY = scrollY - aniEleY + pageHieght
+            if (disY >=0 && disY <1000) {
+                document.querySelector('.inner_info').style = "background-color: transparent;";
+                document.querySelector('.inner_info p').style = "opacity: 0.1;";
+            }
+            else if (disY >=1000 && disY <1400) {
+                document.querySelector('.inner_info').style = "background-color: transparent;";
+                document.querySelector('.inner_info p').style = "opacity: 0.5;";
+            }
+            else if (disY >=1400 && disY <1800) {
+                document.querySelector('.inner_info').style = "background-color: transparent;";
+                document.querySelector('.inner_info p').style = "opacity: 0.9;";
+            }
+            else if (disY >=1800 && disY <3000) {
+                document.querySelector('.inner_info').style = "background-color: rgb(253, 223, 29);";
+                document.querySelector('.inner_info p').style = "opacity: 1;";
+            }
+            else if (disY >=3000 && disY <3200) {
+                document.querySelector('.inner_info').style = "background-color: transparent;";
+                document.querySelector('.inner_info p').style = "opacity: 0.8;";
+            }
+            // else if (disY >=3600 && disY <3700) {
+            //     document.querySelector('.inner_info').style = "background-color: transparent;";
+            //     document.querySelector('.inner_info p').style = "opacity: 0.5;";
+            // }
+            else if (disY >=3200 && disY <3800) {
+                document.querySelector('.inner_info').style = "background-color: transparent;";
+                document.querySelector('.inner_info p').style = "opacity: 0.4;";
+            }
+            else if (disY >=3800 && disY <4300) {
+                document.querySelector('.inner_info').style = "background-color: transparent;";
+                document.querySelector('.inner_info p').style = "opacity: 0.1;";
+            }
+            // else if ( disY >= 2400 ) {
+            //     // document.querySelector('.inner_info').style = "opacity:1";
+            //     document.querySelector('.inner_info p').style = "opacity: 0.5;";
+            // }
+            else {
+                document.querySelector('.inner_info').style = "background-color: transparent;";
+                document.querySelector('.inner_info p').style = "opacity: 0;";
+            }
+            
         }
-        else if (disY >=1000 && disY <1400) {
-            document.querySelector('.inner_info').style = "background-color: transparent;";
-            document.querySelector('.inner_info p').style = "opacity: 0.5;";
-        }
-        else if (disY >=1400 && disY <1800) {
-            document.querySelector('.inner_info').style = "background-color: transparent;";
-            document.querySelector('.inner_info p').style = "opacity: 0.9;";
-        }
-        else if (disY >=1800 && disY <2700) {
-            document.querySelector('.inner_info').style = "background-color: rgb(253, 223, 29);";
-            document.querySelector('.inner_info p').style = "opacity: 1;";
-        }
-        else if (disY >=2700 && disY <3000) {
-            document.querySelector('.inner_info').style = "background-color: transparent;";
-            document.querySelector('.inner_info p').style = "opacity: 0.8;";
-        }
-        else if (disY >=3000 && disY <3100) {
-            document.querySelector('.inner_info').style = "background-color: transparent;";
-            document.querySelector('.inner_info p').style = "opacity: 0.5;";
-        }
-        else if (disY >=3100 && disY <3200) {
-            document.querySelector('.inner_info').style = "background-color: transparent;";
-            document.querySelector('.inner_info p').style = "opacity: 0.2;";
-        }
-        else if (disY >=3200 && disY <4000) {
-            document.querySelector('.inner_info').style = "background-color: transparent;";
-            document.querySelector('.inner_info p').style = "opacity: 0.1;";
-        }
-        // else if ( disY >= 2400 ) {
-        //     // document.querySelector('.inner_info').style = "opacity:1";
-        //     document.querySelector('.inner_info p').style = "opacity: 0.5;";
-        // }
-        else {
-            document.querySelector('.inner_info').style = "background-color: transparent;";
-            document.querySelector('.inner_info p').style = "opacity: 0;";
-        }
-        
     }
-}
+    scrollFadeIn();
+})
+   
 
+// 1440
+document.addEventListener('scroll', () => {
+    function scrollFadeIn2() {
+        var scrollY = window.pageYOffset;
+    
+        if (scrollY > aniEleY - pageHieght ) {
+            var disY = scrollY - aniEleY2 + pageHieght
+            if (disY >=0 && disY <200) {
+                document.querySelector('.inner_info_t').style = "background-color: transparent;";
+                document.querySelector('.inner_info_t p').style = "opacity: 0.1;";
+            }
+            else if (disY >=200 && disY <400) {
+                document.querySelector('.inner_info_t').style = "background-color: transparent;";
+                document.querySelector('.inner_info_t p').style = "opacity: 0.5;";
+            }
+            else if (disY >=400 && disY <600) {
+                document.querySelector('.inner_info_t').style = "background-color: transparent;";
+                document.querySelector('.inner_info_t p').style = "opacity: 0.9;";
+            }
+            else if (disY >=600 && disY <1400) {
+                document.querySelector('.inner_info_t').style = "background-color: rgb(253, 223, 29);";
+                document.querySelector('.inner_info_t p').style = "opacity: 1;";
+            }
+            else if (disY >=1400 && disY <1800) {
+                document.querySelector('.inner_info_t').style = "background-color: transparent;";
+                document.querySelector('.inner_info_t p').style = "opacity: 0.8;";
+            }
+            else if (disY >=1800 && disY <2000) {
+                document.querySelector('.inner_info_t').style = "background-color: transparent;";
+                document.querySelector('.inner_info_t p').style = "opacity: 0.4;";
+            }
+            else if (disY >=2000 && disY <2200) {
+                document.querySelector('.inner_info_t').style = "background-color: transparent;";
+                document.querySelector('.inner_info_t p').style = "opacity: 0.1;";
+            }
+
+            else {
+                document.querySelector('.inner_info_t').style = "background-color: transparent;";
+                document.querySelector('.inner_info_t p').style = "opacity: 0;";
+            }
+            
+        }
+    }
+    scrollFadeIn2();
+})
+
+// 767
+document.addEventListener('scroll', () => {
+    function scrollFadeIn3() {
+        var scrollY = window.pageYOffset;
+    
+        if (scrollY > aniEleY - pageHieght ) {
+            var disY = scrollY - aniEleY3 + pageHieght
+            if (disY >=0 && disY <200) {
+                document.querySelector('.inner_info_m').style = "background-color: transparent; ";
+                document.querySelector('.inner_info_m p').style = "opacity: 0.1;";
+            }
+            else if (disY >=200 && disY <400) {
+                document.querySelector('.inner_info_m').style = "background-color: transparent;";
+                document.querySelector('.inner_info_m p').style = "opacity: 0.5;";
+            }
+            else if (disY >=400 && disY <600) {
+                document.querySelector('.inner_info_m').style = "background-color: transparent;";
+                document.querySelector('.inner_info_m p').style = "opacity: 0.9;";
+            }
+
+
+            
+            else if (disY >=600 && disY <1800) {
+                document.querySelector('.inner_info_m').style = "background-color: rgb(253, 223, 29); ";
+                document.querySelector('.inner_info_m p').style = "opacity: 1; ";
+            }
+
+            else if (disY >=1800 && disY <2000) {
+                document.querySelector('.inner_info_m').style = "background-color: transparent; ";
+                document.querySelector('.inner_info_m p').style = "opacity: 0.8;";
+            }
+            else if (disY >=2000 && disY <2200) {
+                document.querySelector('.inner_info_m').style = "background-color: transparent; ";
+                document.querySelector('.inner_info_m p').style = "opacity: 0.4;";
+            }
+            else if (disY >=2200 && disY <2400) {
+                document.querySelector('.inner_info_m').style = "background-color: transparent;";
+                document.querySelector('.inner_info_m p').style = "opacity: 0.1;";
+            }
+
+            else {
+                document.querySelector('.inner_info_m').style = "background-color: transparent;";
+                document.querySelector('.inner_info_m p').style = "opacity: 0;";
+            }
+            
+        }
+    }
+    scrollFadeIn3();
+})
