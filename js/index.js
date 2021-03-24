@@ -181,47 +181,47 @@ function footerCross() {
 
 
 // JS (max-width 767px) 
-// gnboverM()
+// gnboverM() 
 
-let navbarm = document.querySelector('.gnb_m_wrap');
-const navbarHeightm = navbarm.getBoundingClientRect().height;
+// let navbarm = document.querySelector('.gnb_m_wrap');
+// const navbarHeightm = navbarm.getBoundingClientRect().height;
 
-navbarm.addEventListener('mouseover', () => {
+// navbarm.addEventListener('mouseover', () => {
 
-    function gnbOverM() {
+//     function gnbOverM() {
     
-        document.querySelector('.gnb_m').style = "background-color:white; box-shadow: 0 0 6px 0 rgba(75,75,75,0.8); transition: all 0.6s ease;";
-        document.querySelector('.gnb_m_logo').src = "img/logo_black.png";
+//         document.querySelector('.gnb_m').style = "background-color:white; box-shadow: 0 0 6px 0 rgba(75,75,75,0.8); transition: all 0.6s ease;";
+//         document.querySelector('.gnb_m_logo').src = "img/logo_black.png";
 
-        for ( let i=0; i<3; i++) {
-            document.querySelectorAll('.gnb_m_burger div')[i].style = "background-color: rgb(16, 16, 16); ";
-        }
-    }
+//         for ( let i=0; i<3; i++) {
+//             document.querySelectorAll('.gnb_m_burger div')[i].style = "background-color: rgb(16, 16, 16); ";
+//         }
+//     }
 
-    if (window.scrollY <= navbarHeightm) {
-        gnbOverM();
-    }
-});
+//     if (window.scrollY <= navbarHeightm) {
+//         gnbOverM();
+//     }
+// });
 
-// gnb_m_out
-navbarm.addEventListener('mouseout', onMouseOut)
+// // gnb_m_out
+// navbarm.addEventListener('mouseout', onMouseOut)
 
-function onMouseOut() {
+// function onMouseOut() {
     
-    function gnbOutM() {
-        document.querySelector('.gnb_m').style = "background-color:transparent; transition: all 0.6s ease;";
-        document.querySelector('.gnb_m_logo').src = "img/logo_white.png";
+//     function gnbOutM() {
+//         document.querySelector('.gnb_m').style = "background-color:transparent; transition: all 0.6s ease;";
+//         document.querySelector('.gnb_m_logo').src = "img/logo_white.png";
     
-        for ( let i=0; i<3; i++) {
-            document.querySelectorAll('.gnb_m_burger div')[i].style = "background-color: rgb(252, 252, 252);";
-        } 
+//         for ( let i=0; i<3; i++) {
+//             document.querySelectorAll('.gnb_m_burger div')[i].style = "background-color: rgb(252, 252, 252);";
+//         } 
     
-    }       
-    if (window.scrollY <= navbarHeightm) {
-        gnbOutM();
-    }    
+//     }       
+//     if (window.scrollY <= navbarHeightm) {
+//         gnbOutM();
+//     }    
     
-}
+// }
 
 
 // 스크롤 움직일 때 gnb over & out
@@ -264,7 +264,7 @@ document.addEventListener('scroll', () => {
 const navSlide = () => {
   const burger = document.querySelector('.gnb_m_burger');
   const nav = document.querySelector('.gnb_m');
-  const navLinks = document.querySelectorAll('.gnb_m_items li');
+  const navLinks = document.querySelectorAll('.gnb_m_navlink');
   const body = document.querySelector('body');
 
   burger.addEventListener('click', () => {
@@ -272,11 +272,23 @@ const navSlide = () => {
     //burger toggle
     nav.classList.toggle('nav-active')
     if(nav.className === 'gnb_m nav-active'){
-    navbarm.removeEventListener('mouseout' , onMouseOut)
+        document.querySelector('.gnb_m').style = "background-color:white; box-shadow: 0 0 6px 0 rgba(75,75,75,0.8); transition: all 0.6s ease;";
+        document.querySelector('.gnb_m_logo').src = "img/logo_black.png";
+
+        for ( let i=0; i<3; i++) {
+            document.querySelectorAll('.gnb_m_burger div')[i].style = "background-color: rgb(16, 16, 16); ";
+        }
+    // navbarm.removeEventListener('mouseout' , onMouseOut)
     body.style.overflow = "hidden";
     }
     else {
-    navbarm.addEventListener('mouseout' , onMouseOut)
+        document.querySelector('.gnb_m').style = "background-color:transparent; transition: all 0.6s ease;";
+        document.querySelector('.gnb_m_logo').src = "img/logo_white.png";
+    
+        for ( let i=0; i<3; i++) {
+            document.querySelectorAll('.gnb_m_burger div')[i].style = "background-color: rgb(252, 252, 252);";
+        } 
+    // navbarm.addEventListener('mouseout' , onMouseOut)
     body.style.overflow = "auto";
     }
     console.log(nav.className === 'gnb_m nav-active')
@@ -467,3 +479,28 @@ document.addEventListener('scroll', () => {
     }
     scrollFadeIn3();
 })
+
+
+// gnb_m accordion 
+let openstate2 = [false, false];
+
+function contentShow(target) {
+    // 이벤트 발생 이외의 다른 요소는 초기화
+    for (let i=0; i<2; i++) {
+                
+        if (i != target) {
+        document.querySelectorAll('.gnb_m_acc')[i].style = "height: 61px; opacity:1;";
+        openstate2[i] = false;
+    }
+    }
+
+    // 이벤트 발생 요소에 대한 실행 처리
+    if (openstate2[target]) {
+        document.querySelectorAll('.gnb_m_acc')[target].style = "height: 61px; opacity:1;"
+        openstate2[target] = false;
+    }
+    else {
+        document.querySelectorAll('.gnb_m_acc')[target].style = "max-height: 400px; opacity:1;"
+        openstate2[target] = true;
+    }
+}
