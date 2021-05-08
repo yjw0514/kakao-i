@@ -93,7 +93,7 @@ document.addEventListener('scroll', () => {
         }
     
         else {
-           gnbScrollUp();
+            gnbScrollUp();
             }
     });
 
@@ -113,23 +113,23 @@ function menuClose1() {
 function menuOpen(target) {
 
     for (let i=0; i<2; i++)
-       {
-          document.querySelectorAll('.gnb_sub_wrap')[i].style = "display:none;";
-       }
+    {
+        document.querySelectorAll('.gnb_sub_wrap')[i].style = "display:none;";
+    }
 
     document.querySelectorAll('.gnb_sub_wrap')[target].style = "display:flex;";
 
     document.querySelector('.gnb_sub').style = " max-height: 140px;";
- }
+}
 
- function menuClose() {
-    document.querySelector('.gnb_sub').style = "max-height:0px;";
-    document.querySelector('.gnb_sub').style = "display:none;";
- }
+function menuClose() {
+document.querySelector('.gnb_sub').style = "max-height:0px;";
+document.querySelector('.gnb_sub').style = "display:none;";
+}
 
- function menuOpenKeep() {
-    document.querySelector('.gnb_sub').style = "max-height:140px;";
- }
+function menuOpenKeep() {
+document.querySelector('.gnb_sub').style = "max-height:140px;";
+}
 
 
 
